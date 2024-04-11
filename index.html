@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/972decce40.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div class="vh-100 over-flow-hidden home container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+            <div class="container">
+                <a class="navbar-brand  logo">
+                    <img src="https://img.freepik.com/free-vector/healthy-food-design_24877-49620.jpg?t=st=1712079867~exp=1712083467~hmac=2afe7d2563ce4973ffbeea6e0d50b87ec1cda13a61fdd25ab6b1b496ac3de3e6&w=740"
+                        style="width:100px" class="rounded-circle">
+                </a>
+
+                <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header text-white border-bottom">
+                        <h5 class=" text-capitalize h1"> fresh veggies</h5>
+                        <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body d-flex">
+                        <ul
+                            class="navbar-nav d-flex flex-column justify-content-center align-items-center flex-lg-row p-lg-0   p-2 fs-5 flex-grow-1 pe-3">
+                            <li class="nav-item mx-2">
+                                <a class="nav-link" href="#home">Home</a>
+                            </li>
+
+                            <li class="nav-item mx-2">
+                                <a class="nav-link" href="#about">About</a>
+                            </li>
+
+                            <li class="nav-item mx-2">
+                                <a class="nav-link" href="#testimonials">Testimonials</a>
+                            </li>
+
+                            <li class="nav-item mx-2">
+                                <a class="nav-link" href="#contact">Contact</a>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <a class="nav-link" href="#cart">
+                                    <div class="cart-box">
+                                        <span class="num">
+
+                                        </span>
+                                        <i class="fa-solid fa-cart-shopping" id="cart-icon"></i>
+
+                                    </div>
+                                </a>
+                            </li>
+
+                        </ul>
+
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="cart">
+            <div class="cart-title"><span class="underlined1">cart-items</span></div>
+            <div class="cart-content"></div>
+            <!-- <div class="cart-title">Cart Items</div>
+                <div class="cart-content">
+                  <div class="cart-box1">
+                    <img src="img1.jpg" class="cart-img">
+                    <div class="detail-box">
+                      <div class="cart-Movie-title">The pursuit of happiness</div>
+                      <div class="price-box">
+                        <div class="cart-price">Rs.150</div>
+                         <div class="cart-amt">Rs.150</div>
+                     </div>
+                      <input type="number" value="1" class="cart-quantity">
+                    </div>
+                    <span class="material-symbols-outlined icon" id="cart-remove">
+                        delete
+                        </span>
+                  </div> 
+        
+                   <div class="cart-box1">
+                    <img src="img1.jpg" class="cart-img">
+                    <div class="detail-box">
+                      <div class="cart-Movie-title">The pursuit of happiness</div>
+                      <div class="price-box">
+                        <div class="cart-price">Rs.150</div>
+                         <div class="cart-amt">Rs.150</div>
+                     </div>
+                      <input type="number" value="1" class="cart-quantity">
+                    </div>
+                    <span class="material-symbols-outlined icon" id="cart-remove">
+                        delete
+                        </span>
+                  </div>
+                </div>  -->
+
+            <div class="total">
+                <div class="total-title">Total</div>
+                <div class="total-price">Rs.0</div>
+            </div>
+
+            <button class="btn-buy">Place Order</button>
+
+
+            <i class="fa-solid fa-xmark" id="cart-close"></i>
+
+        </div>
+
+
+
+        <main>
+            <section class="w-100 d-flex flex-column justify-content-center align-items-center  text-white fs-5 main"
+                id="home">
+                <p style="font-size:4rem" class="h1 text-capitalize">fresh veggies</p>
+                <h1 style="font-size:1.5rem">at lowest price</h1>
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <div class="container mt-5">
+        <p style="font-size:4rem" class="h1 text-capitalize text-center lead"><span class="underlined">buy now</span>
+        </p>
+
+        <h2 class="  text-center mt-5 mb-3">Checkout Our Top Sell vegetables</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4 ms-5 p-3">
+
+            <div class="col">
+                <div class="card border-0 rounded-0 shadow movie-box" style="width: 18rem;">
+                    <img src="https://img.freepik.com/free-photo/fresh-papaya-fruit_144627-34235.jpg?t=st=1712686822~exp=1712690422~hmac=915d4b9c7515c1c333c81dbbedcee6517bbfbfadfd310a9867b0ef2029c9fbee&w=360"
+                        class="card-img-top rounded-0" id="movie-img" alt="...">
+                    <div class="card-body mt-3 mb-3 price-box">
+                        <h4 class="card-title movie-title text-capitalize">papaya</h4>
+
+
+                        <h5 class="movie-price">Rs.50</h5>
+                    </div>
+                    <a href="#" class="btn btn-dark w-100 p-3 rounded-0 text-warning" id="cart-add"><i
+                            class="fa-solid fa-cart-shopping fs-5" id="cart-icon"></i></a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card border-0 rounded-0 shadow movie-box" style="width: 18rem;">
+                    <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRdWrNVJU7kTs4Q-CrSF3LsZnNgLhUe2LcA6tDw9qENm3Dt99zc"
+                        class="card-img-top rounded-0" id="movie-img" alt="...">
+                    <div class="card-body mt-3 mb-3 price-box">
+                        <h4 class="card-title movie-title text-capitalize">guava</h4>
+
+
+                        <h5 class="movie-price">Rs.80</h5>
+                    </div>
+                    <a href="#" class="btn btn-dark w-100 p-3 rounded-0 text-warning" id="cart-add"><i
+                            class="fa-solid fa-cart-shopping fs-5" id="cart-icon"></i></a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card border-0 rounded-0 shadow movie-box" style="width: 18rem;">
+                    <img src="https://www.hindustantimes.com/ht-img/img/2023/04/20/550x309/6e08a8b0-2d01-11ec-be0b-d2c840e92b17_1634228780017_1681999021996.jpg"
+                        class="card-img-top rounded-0" id="movie-img" alt="...">
+                    <div class="card-body mt-3 mb-3 price-box">
+                        <h4 class="card-title movie-title text-capitalize">mango</h4>
+
+
+                        <h5 class="movie-price">Rs.150</h5>
+                    </div>
+                    <a href="#" class="btn btn-dark w-100 p-3 rounded-0 text-warning" id="cart-add"><i
+                            class="fa-solid fa-cart-shopping fs-5" id="cart-icon"></i></a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card border-0 rounded-0 shadow movie-box" style="width: 18rem;">
+                    <img src="https://fastandfresh.in/cdn/shop/products/Whitemushroom_800x.jpg?v=1655795649"
+                        class="card-img-top rounded-0" id="movie-img" alt="...">
+                    <div class="card-body mt-3 mb-3 price-box">
+                        <h4 class="card-title movie-title text-capitalize">mushrooms</h4>
+
+
+                        <h5 class="movie-price">Rs.250</Rs>
+                        </h5>
+                    </div>
+                    <a href="#" class="btn btn-dark w-100 p-3 rounded-0 text-warning" id="cart-add"><i
+                            class="fa-solid fa-cart-shopping fs-5" id="cart-icon"></i></a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card border-0 rounded-0 shadow movie-box" style="width: 18rem;">
+                    <img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2023/6/28/fresh-corn-on-the-cob-partially-shucked-on-dark-background.jpg.rend.hgtvcom.1280.720.suffix/1687987003387.jpeg"
+                        class="card-img-top rounded-0" id="movie-img" alt="...">
+                    <div class="card-body mt-3 mb-3 price-box">
+                        <h4 class="card-title movie-title text-capitalize"> sweetcorn</h4>
+
+
+                        <h5 class="movie-price">Rs.150</h5>
+                    </div>
+                    <a href="#" class="btn btn-dark w-100 p-3 rounded-0 text-warning" id="cart-add"><i
+                            class="fa-solid fa-cart-shopping fs-5" id="cart-icon"></i></a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card border-0 rounded-0 shadow movie-box" style="width: 18rem;">
+                    <img src="https://m.media-amazon.com/images/I/719i9Z+Sc6L._AC_UF1000,1000_QL80_.jpg"
+                        class="card-img-top rounded-0" id="movie-img" alt="...">
+                    <div class="card-body mt-3 mb-3 price-box">
+                        <h4 class="card-title movie-title text-capitalize">drumsticks</h4>
+
+
+                        <h5 class="movie-price">Rs.60</h5>
+                    </div>
+                    <a href="#" class="btn btn-dark w-100 p-3 rounded-0 text-warning" id="cart-add"><i
+                            class="fa-solid fa-cart-shopping fs-5" id="cart-icon"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid  main-section mt-5">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="top-banner">
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <h2>SAVE 30%</h2>
+                                <h3>why you buy here?</h3>
+                                <p>Lorem Ipsum is simply dummy text how to make ecommerce website industry. Web design
+                                    refers to the design refers</p>
+                            </div>
+                            <div class="col-lg-5">
+                                <div>
+                                    <img
+                                        src="https://media.istockphoto.com/id/1280856062/photo/variety-of-fresh-organic-vegetables-and-fruits-in-the-garden.jpg?s=612x612&w=0&k=20&c=KoF5Ue-g3wO3vXPgLw9e2Qzf498Yow7WGXMSCNz7O60=">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="top-banner">
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <h2>SAVE 30%</h2>
+                                <h3>We give you fresh</h3>
+                                <p>Lorem Ipsum is simply of how to build an ecommerce website from scratch. Web design
+                                    refers to the design refers</p>
+                            </div>
+                            <div class="col-lg-5">
+                                <div>
+                                    <img
+                                        src="https://media.istockphoto.com/id/870915532/photo/man-holding-crate-ob-fresh-vegetables.jpg?s=612x612&w=0&k=20&c=k2dXOI-wxUy7lX77Pm90vU6TJXmAAv5VtK60ZZHIyCA=">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid main-section bg-color mb-3 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="adv-left">
+                        <img
+                            src="https://www.goteso.com/products/assets/images/fruit-and-vegetable-business-management-app.png">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="adv-right">
+                        <h2><span class="underlined1">Fastest Delivery</span></h2>
+                        <h3>Your Fresh vegetables <br> on the Way! </h3>
+                        <p>Web design refers to the design of websites that Delivery in are displayed on the internet.
+                        </p>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4">
+                                <div class="about-div">
+                                    <i class="fa fa-home"></i>
+                                    <p>Delivery in 30 minutes.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4">
+                                <div class="about-div">
+                                    <i class="fa fa-hourglass"></i>
+                                    <p>Delivery in 30 minutes.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4">
+                                <div class="about-div">
+                                    <i class="fa fa-birthday-cake"></i>
+                                    <p>Delivery in 30 minutes.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid  main-section mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="heading-section text-center mb-3">
+                        <h3>Our Testimonials</h3>
+                        <h2><span class="underlined1">What Our Client Say's</span></h2>
+                        <div class="heading-borders">
+                            <span class="selected"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-12">
+                    <div class="demo-5 owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="testimonial">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                    ecommerce website using html css and javascript source code.</p>
+                                <div class="testimonial-img">
+                                    <img
+                                        src="https://i0.wp.com/mintswift.com/wp-content/uploads/2018/05/Beth-Watson-Testimonial-Avatar-%E2%80%93-MintSwift.png?fit=200%2C200&ssl=1">
+                                </div>
+                                <div class="testimonial-user">
+                                    <h5>Nancy Bayers</h5>
+                                    <h6> Founder & CEO At Dezven</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimonial">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                    ecommerce website using html css and javascript source code github.</p>
+                                <div class="testimonial-img">
+                                    <img src="https://illusionfx.in/wp-content/uploads/2023/08/1.png">
+                                </div>
+                                <div class="testimonial-user">
+                                    <h5>Nancy Bayers</h5>
+                                    <h6> Founder & CEO At Dezven</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimonial">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                    incididunt online shopping website using html and css source code.</p>
+                                <div class="testimonial-img">
+                                    <img
+                                        src="https://www.thearoralawfirm.com/wp-content/uploads/2021/01/testimonials_man4.png">
+                                </div>
+                                <div class="testimonial-user">
+                                    <h5>Nancy Bayers</h5>
+                                    <h6> Founder & CEO At Dezven</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimonial">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                    incididunt ut labore et simple shopping website using html and css.</p>
+                                <div class="testimonial-img">
+                                    <img src="https://yuntonghomes.com/wp-content/uploads/2022/09/woman-300x300.jpg">
+                                </div>
+                                <div class="testimonial-user">
+                                    <h5>Nancy Bayers</h5>
+                                    <h6> Founder & CEO At Dezven</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimonial">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                    incididunt ut lab how to create a ecommerce website using html and css.</p>
+                                <div class="testimonial-img">
+                                    <img
+                                        src="https://lh3.googleusercontent.com/proxy/s7z9HcxCUWQkl7zlUwy842CadR1B8-W3Kh1RNO1U7Cfd0_Mq8TAL_5qzm_aIKtuua5cSjZ8gYROEMucaa_EwUa5u47vk2IwfhzCxKRyjZddsw1kWCWzmNlfvBR1uNIdY8SLEYkQ">
+                                </div>
+                                <div class="testimonial-user">
+                                    <h5>Nancy Bayers</h5>
+                                    <h6> Founder & CEO At Dezven</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimonial">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                                <div class="testimonial-img">
+                                    <img
+                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJOJ-EAELfE1DHaJ65NlRvfg-uZoaDpnuQnyLoX2GXlRI4B7AGhH3OYJUS8jIMgEiy67c&usqp=CAU">
+                                </div>
+                                <div class="testimonial-user">
+                                    <h5>Nancy Bayers</h5>
+                                    <h6> Founder & CEO At Dezven</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimonial">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                                <div class="testimonial-img">
+                                    <img
+                                        src="https://png.pngitem.com/pimgs/s/137-1370168_professional-clipart-female-avatar-circle-hd-png-download.png">
+                                </div>
+                                <div class="testimonial-user">
+                                    <h5>Nancy Bayers</h5>
+                                    <h6> Founder & CEO At Dezven</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimonial">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                    incididunt ut labore e how to build an ecommerce website step by step.</p>
+                                <div class="testimonial-img">
+                                    <img
+                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJU7Hpr8wdW0nVIxCl9u9N7VsalFRgwPdj2-ldEX4aPA&s">
+                                </div>
+                                <div class="testimonial-user">
+                                    <h5>Nancy Bayers</h5>
+                                    <h6> Founder & CEO At Dezven</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid footer-section mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="footer-top">
+                        <h2>A Moments Of Delivered <br> On Right Time & Place </h2>
+                        <h3>90-9893-304-801</h3>
+                        <span class="border-bottoms"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h2>
+                        <img src="https://img.freepik.com/free-vector/healthy-food-design_24877-49620.jpg?t=st=1712079867~exp=1712083467~hmac=2afe7d2563ce4973ffbeea6e0d50b87ec1cda13a61fdd25ab6b1b496ac3de3e6&w=740"
+                            style="width:100px" class="rounded-circle">
+                    </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>Our Company</h4>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="footer-menu">
+                                <ul>
+                                    <li>Home</li>
+                                    <li>Menu</li>
+                                    <li>About us</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="footer-menu">
+                                <ul>
+                                    <li>Quick Order</li>
+                                    <li>Blogging</li>
+                                    <li>Contact Us</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h4>Our Company</h4>
+                    <table>
+                        <tr>
+                            <td>Mon-Fri...................</td>
+                            <td>8:00 am-12:00 pm</td>
+                        </tr>
+                        <tr>
+                            <td>Saturday.................</td>
+                            <td>8:00 am-12:00 pm</td>
+                        </tr>
+                        <tr>
+                            <td>Sunday....................</td>
+                            <td>8:00 am-12:00 pm</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-md-4">
+                    <h4>Contact Us</h4>
+                    <div class="contact-info">
+                        <p>
+                            <span>
+                                <i class="fa fa-map-marker"></i>
+                            </span> 89, Ring Road, New Delhi , India
+                        </p>
+                        <p>
+                            <span>
+                                <i class="fa fa-phone"></i>
+                            </span> +91 9893 304 801
+                        </p>
+                        <ul>
+                            <li>
+                                <i class="fa fa-instagram"></i>
+                            </li>
+                            <li>
+                                <i class="fa fa-whatsapp"></i>
+                            </li>
+                            <li>
+                                <i class="fa fa-youtube"></i>
+                            </li>
+                            <li>
+                                <i class="fa fa-twitter"></i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container ">
+            <div class="row copyright">
+                <div class="col-md-6">
+                    <p>@ All Copy Right By farmfresh Company</p>
+                </div>
+                <div class="col-md-6">
+                    <ul>
+                        <li>
+                            <a href="#">Service</a>
+                        </li>
+                        <li>
+                            <a href="#">Blog</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 35,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        })
+
+    </script>
+</body>
+
+</html>
